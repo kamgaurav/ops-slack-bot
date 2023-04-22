@@ -22,16 +22,7 @@ def start_app():
         _logger.error("App could not be started")
 
     initialize_commands(app)
-    #initialize_events(app)
-    #initialize_messages(app)
-    #initialize_actions(app)
-    #initialize_shortcuts(app)
-    #initialize_views(app)
-    #initialize_options(app)
-
-    #_logger.debug(f"Views: {ViewFactory.view_registry}")
-    #_logger.debug(f"View Handlers: {ViewHandlerFactory.view_handler_registry}")
-
+    
     # Use the built-in Socket Mode Handler
     handler: SocketModeHandler = SocketModeHandler(app, "")
     handler.start()
